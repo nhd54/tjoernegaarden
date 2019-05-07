@@ -1,0 +1,23 @@
+{
+  "name": "tjoernegaarden",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mysass": "node-sass assets/style/sass/main.scss assets/style/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhd54/tjoernegaarden.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhd54/tjoernegaarden/issues"
+  },
+  "homepage": "https://github.com/nhd54/tjoernegaarden#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
