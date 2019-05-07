@@ -1,4 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$darkblue: #003555;
+$brightblue: #1c7293;
+$yellow: #f6ae2d;
+$mainfont: "Fredericka the Great", cursive;
+$secondfont: "Open Sans", sans-serif;
+$fontsize--header: 72px;
+$fontsize--bigtext: 36px;
+$fontsize--maintext: 24px;
+
 h1 {
-  color: blue;
-  font-family: "Fredericka the Great", cursive;
+  color: $brightblue;
+  font-family: $mainfont;
+}
+
+.background--darkblue {
+  background-color: $darkblue;
+}
+
+.background--brightblue {
+  background-color: $brightblue;
+}
+
+.background--yellow {
+  background-color: $yellow;
+}
+
+.font--mainheader {
+  font-size: $fontsize--header;
+  color: #ffffff;
+  text-shadow: 2.5 2.5 6 rgba(0, 0, 0, 0.52);
+}
+.font--maintext {
+  font-size: $fontsize--maintext;
+  color: $darkblue;
+}
+
+.font--bigtext {
+  font-size: $fontsize--bigtext;
+  color: $darkblue;
+}
+
+.font--boldheader {
+  font-size: $fontsize--bigtext;
+  font-weight: 700;
+  color: $darkblue;
 }

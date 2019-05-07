@@ -1,3 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 h1 {
-  color: blue;
+  color: #1c7293;
   font-family: "Fredericka the Great", cursive; }
+
+.background--darkblue {
+  background-color: #003555; }
+
+.background--brightblue {
+  background-color: #1c7293; }
+
+.background--yellow {
+  background-color: #f6ae2d; }
+
+.font--mainheader {
+  font-size: 72px;
+  color: #ffffff;
+  text-shadow: 2.5 2.5 6 rgba(0, 0, 0, 0.52); }
+
+.font--maintext {
+  font-size: 24px;
+  color: #003555; }
+
+.font--bigtext {
+  font-size: 36px;
+  color: #003555; }
+
+.font--boldheader {
+  font-size: 36px;
+  font-weight: 700;
+  color: #003555; }
