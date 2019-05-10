@@ -2,6 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+html {
+  width: 100vw;
 }
 
 $darkblue: #003555;
@@ -9,14 +19,9 @@ $brightblue: #1c7293;
 $yellow: #f6ae2d;
 $mainfont: "Fredericka the Great", cursive;
 $secondfont: "Open Sans", sans-serif;
-$fontsize--header: 72px;
-$fontsize--bigtext: 36px;
-$fontsize--maintext: 24px;
-
-h1 {
-  color: $brightblue;
-  font-family: $mainfont;
-}
+$fontsize--header: 24px;
+$fontsize--bigtext: 24px;
+$fontsize--maintext: 18px;
 
 .background--darkblue {
   background-color: $darkblue;
@@ -28,6 +33,11 @@ h1 {
 
 .background--yellow {
   background-color: $yellow;
+}
+
+h1 {
+  color: $brightblue;
+  font-family: $mainfont;
 }
 
 .font--mainheader {
@@ -49,4 +59,36 @@ h1 {
   font-size: $fontsize--bigtext;
   font-weight: 700;
   color: $darkblue;
+}
+
+@media screen and(min-width:769px) {
+  $fontsize--header: 72px;
+  $fontsize--bigtext: 36px;
+  $fontsize--maintext: 24px;
+
+  h1 {
+    color: $brightblue;
+    font-family: $mainfont;
+  }
+
+  .font--mainheader {
+    font-size: $fontsize--header;
+    color: #ffffff;
+    text-shadow: 2.5 2.5 6 rgba(0, 0, 0, 0.52);
+  }
+  .font--maintext {
+    font-size: $fontsize--maintext;
+    color: $darkblue;
+  }
+
+  .font--bigtext {
+    font-size: $fontsize--bigtext;
+    color: $darkblue;
+  }
+
+  .font--boldheader {
+    font-size: $fontsize--bigtext;
+    font-weight: 700;
+    color: $darkblue;
+  }
 }
