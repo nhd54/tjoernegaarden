@@ -7,7 +7,7 @@
 
 .splash__images {
   display: grid;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .images {
@@ -52,12 +52,18 @@
 }
 
 @media screen and(min-width:769px) {
+  .splash {
+    height: 67vh;
+    grid-template-rows: 67.7% 44%;
+  }
   .splash__content {
     width: 40%;
+    margin: 6px auto;
   }
 
   .splash__svg {
     width: 150%;
     right: 50%;
+    top: -19.5%;
   }
 }

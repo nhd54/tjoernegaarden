@@ -98,11 +98,12 @@ nav {
 
 .navigation__link {
   color: white;
+  margin: 0 auto;
 }
 
 @media screen and(min-width:769px) {
   .menu {
-    height: 10vh;
+    height: 6vh;
   }
 
   .menu__logo img {
@@ -127,7 +128,7 @@ nav {
 
   .navigation__item {
     margin: 0;
-    justify-self: center;
+
     display: flex;
     align-items: center;
   }
