@@ -88,7 +88,7 @@ h1 {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: black;
+  background: white;
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -107,7 +107,7 @@ h1 {
 .active span {
   opacity: 1;
   transform: rotate(-45deg) translate(-9px, -1px);
-  background: #232323; }
+  background: white; }
 
 /*
  * But let's hide the middle one.
