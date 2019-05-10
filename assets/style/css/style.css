@@ -103,7 +103,7 @@ nav {
 
 @media screen and (min-width: 769px) {
   .menu {
-    height: 15vh; }
+    height: 10vh; }
   .menu__logo img {
     width: 75%;
     position: relative;
@@ -123,3 +123,54 @@ nav {
     justify-self: center;
     display: flex;
     align-items: center; } }
+
+.splash {
+  width: 100vw;
+  height: 85vh;
+  display: grid;
+  grid-template-rows: 67% 45%; }
+
+.splash__images {
+  display: grid;
+  overflow-x: hidden; }
+
+.images {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  display: flex;
+  flex-wrap: nowrap; }
+
+.splash__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.splash__triangle {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  z-index: 5;
+  justify-self: end;
+  align-self: end; }
+
+.splash__svg {
+  width: 130%;
+  position: relative;
+  right: 30%;
+  top: 1.5%; }
+
+.splash__triangle img {
+  width: 50%; }
+
+.splash__content {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  margin: 10px auto; }
+
+@media screen and (min-width: 769px) {
+  .splash__content {
+    width: 40%; }
+  .splash__svg {
+    width: 150%;
+    right: 50%; } }
