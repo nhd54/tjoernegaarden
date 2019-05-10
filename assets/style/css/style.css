@@ -12,6 +12,10 @@ body {
 html {
   width: 100vw; }
 
+main {
+  display: grid;
+  grid-template-rows: 95vh auto 30vh; }
+
 .background--darkblue {
   background-color: #003555; }
 
@@ -28,7 +32,9 @@ h1 {
 .font--mainheader {
   font-size: 24px;
   color: #ffffff;
-  text-shadow: 2.5 2.5 6 rgba(0, 0, 0, 0.52); }
+  text-shadow: 2.5px 2.5px 6px rgba(0, 0, 0, 0.52);
+  text-align: center;
+  padding: 10px 0; }
 
 .font--maintext {
   font-size: 18px;
@@ -50,7 +56,7 @@ h1 {
   .font--mainheader {
     font-size: 72px;
     color: #ffffff;
-    text-shadow: 2.5 2.5 6 rgba(0, 0, 0, 0.52); }
+    text-shadow: 2.5px 2.5px 6px rgba(0, 0, 0, 0.52); }
   .font--maintext {
     font-size: 24px;
     color: #003555; }

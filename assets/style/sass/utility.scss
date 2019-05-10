@@ -14,6 +14,11 @@ html {
   width: 100vw;
 }
 
+main {
+  display: grid;
+  grid-template-rows: 95vh auto 30vh;
+}
+
 $darkblue: #003555;
 $brightblue: #1c7293;
 $yellow: #f6ae2d;
@@ -43,7 +48,9 @@ h1 {
 .font--mainheader {
   font-size: $fontsize--header;
   color: #ffffff;
-  text-shadow: 2.5 2.5 6 rgba(0, 0, 0, 0.52);
+  text-shadow: 2.5px 2.5px 6px rgba(0, 0, 0, 0.52);
+  text-align: center;
+  padding: 10px 0;
 }
 .font--maintext {
   font-size: $fontsize--maintext;
@@ -74,7 +81,7 @@ h1 {
   .font--mainheader {
     font-size: $fontsize--header;
     color: #ffffff;
-    text-shadow: 2.5 2.5 6 rgba(0, 0, 0, 0.52);
+    text-shadow: 2.5px 2.5px 6px rgba(0, 0, 0, 0.52);
   }
   .font--maintext {
     font-size: $fontsize--maintext;
