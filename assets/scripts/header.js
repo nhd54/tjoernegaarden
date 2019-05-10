@@ -4,9 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   burgerMenu.addEventListener("click", () => {
     if (menu.classList.contains("menu__navigation--active")) {
       menu.classList.remove("menu__navigation--active");
+
+      burgerMenu.classList.remove("active");
     } else {
       menu.classList.add("menu__navigation--active");
       console.log(menu.classList);
+
+      burgerMenu.classList.add("active");
     }
   });
 });
