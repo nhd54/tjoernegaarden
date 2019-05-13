@@ -14,7 +14,7 @@ html {
 
 main {
   display: grid;
-  grid-template-rows: 95vh auto 30vh; }
+  grid-template-rows: 95vh auto; }
 
 .background--darkblue {
   background-color: #003555; }
@@ -38,16 +38,19 @@ h1 {
 
 .font--maintext {
   font-size: 18px;
-  color: #003555; }
+  color: #003555;
+  font-family: "Open Sans", sans-serif; }
 
 .font--bigtext {
   font-size: 24px;
-  color: #003555; }
+  color: #003555;
+  font-family: "Open Sans", sans-serif; }
 
 .font--boldheader {
   font-size: 24px;
   font-weight: 700;
-  color: #003555; }
+  color: #003555;
+  font-family: "Open Sans", sans-serif; }
 
 @media screen and (min-width: 769px) {
   h1 {
@@ -221,7 +224,7 @@ nav {
 @media screen and (min-width: 769px) {
   .splash {
     height: 67vh;
-    grid-template-rows: 67.7% 44%; }
+    grid-template-rows: 67.7% 74%; }
   .splash__content {
     width: 40%;
     margin: 6px auto; }
@@ -229,3 +232,71 @@ nav {
     width: 150%;
     right: 50%;
     top: -19.5%; } }
+
+.content__box {
+  width: 100vw;
+  min-height: 40vh;
+  height: auto; }
+
+.content__imagebox {
+  width: 100%;
+  height: 250px;
+  position: relative; }
+
+.content__image {
+  height: 100%; }
+
+.content__info {
+  width: 100%;
+  display: grid;
+  padding: 15px; }
+
+.content__cta {
+  border: none;
+  border-radius: 3px;
+  padding: 2.5% 0;
+  margin: 5% 0;
+  color: white; }
+
+.triangle__figure {
+  position: absolute;
+  bottom: 0;
+  width: 80%; }
+
+.focus--left .triangle__figure {
+  left: 0; }
+
+.focus--right .triangle__figure {
+  right: 0; }
+
+@media screen and (min-width: 769px) {
+  .content__box {
+    display: flex;
+    height: 40vh; }
+  .content__imagebox {
+    width: 50%;
+    height: 100%; }
+  .focus--left .content__imagebox {
+    order: 1; }
+  .focus--right .content__imagebox {
+    order: 2; }
+  .focus--left .content__info {
+    order: 2; }
+  .focus--right .content__infos {
+    order: 1; }
+  .content__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .content__info {
+    width: 50%; }
+  .content__cta {
+    border: none;
+    height: 50%;
+    width: 25%;
+    align-self: center;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    justify-self: center; } }

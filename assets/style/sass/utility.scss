@@ -16,7 +16,7 @@ html {
 
 main {
   display: grid;
-  grid-template-rows: 95vh auto 30vh;
+  grid-template-rows: 95vh auto;
 }
 
 $darkblue: #003555;
@@ -55,17 +55,20 @@ h1 {
 .font--maintext {
   font-size: $fontsize--maintext;
   color: $darkblue;
+  font-family: $secondfont;
 }
 
 .font--bigtext {
   font-size: $fontsize--bigtext;
   color: $darkblue;
+  font-family: $secondfont;
 }
 
 .font--boldheader {
   font-size: $fontsize--bigtext;
   font-weight: 700;
   color: $darkblue;
+  font-family: $secondfont;
 }
 
 @media screen and(min-width:769px) {
