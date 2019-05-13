@@ -71,6 +71,9 @@ h1 {
     font-weight: 700;
     color: #003555; } }
 
+.font--whitecolor {
+  color: white; }
+
 .menu {
   height: 10vh;
   display: flex;
@@ -221,6 +224,19 @@ nav {
   width: 80%;
   margin: 10px auto; }
 
+.splash__content i {
+  font-size: 40px;
+  animation: movearrow 2s infinite;
+  position: relative; }
+
+@keyframes movearrow {
+  0% {
+    top: 0px; }
+  50% {
+    top: 5px; }
+  100% {
+    top: 0px; } }
+
 @media screen and (min-width: 769px) {
   .splash {
     height: 67vh;
@@ -300,3 +316,36 @@ nav {
     margin: 0;
     color: white;
     justify-self: center; } }
+
+html {
+  scroll-behavior: smooth; }
+
+footer {
+  width: 100vw;
+  height: 50vh;
+  padding: 30px 15px; }
+
+footer figure {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 30%; }
+
+footer figure a {
+  color: white; }
+
+footer figure i {
+  font-size: 70px; }
+
+@media screen and (min-width: 769px) {
+  footer figure {
+    margin: 0;
+    width: 20%;
+    align-items: center; }
+  footer address {
+    width: 70%;
+    display: grid; }
+  footer {
+    display: flex; }
+  footer h4 {
+    align-self: end; } }
