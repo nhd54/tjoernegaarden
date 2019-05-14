@@ -31,6 +31,8 @@ h1 {
 
 .font--mainheader {
   font-size: 24px;
+  font-family: "Fredericka the Great", cursive;
+  font-weight: 200;
   color: #ffffff;
   text-shadow: 2.5px 2.5px 6px rgba(0, 0, 0, 0.52);
   text-align: center;
@@ -76,9 +78,12 @@ h1 {
 
 .menu {
   height: 10vh;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
-  padding: 0 2%; }
+  padding: 0 2%;
+  position: fixed;
+  z-index: 20; }
 
 .menu__logo {
   width: 10%;
@@ -159,12 +164,13 @@ nav {
 
 @media screen and (min-width: 769px) {
   .menu {
-    height: 6vh; }
+    height: 7vh; }
   .menu__logo img {
     width: 75%;
     position: relative;
     top: 20px;
-    left: 15px; }
+    left: 15px;
+    transition: 0.4s; }
   .menu__icon {
     display: none; }
   .menu__navigation {
@@ -174,6 +180,9 @@ nav {
     position: static;
     height: auto;
     width: auto; }
+  .menu__logo .menu--scrolled {
+    width: 35%;
+    top: 0; }
   .navigation__item {
     margin: 0;
     display: flex;
@@ -226,16 +235,16 @@ nav {
 
 .splash__content i {
   font-size: 40px;
-  animation: movearrow 2s infinite;
+  animation: movearrow 2s infinite ease-in-out;
   position: relative; }
 
 @keyframes movearrow {
   0% {
-    top: 0px; }
+    transform: translateY(0px); }
   50% {
-    top: 5px; }
+    transform: translateY(5px); }
   100% {
-    top: 0px; } }
+    transform: translateY(0px); } }
 
 @media screen and (min-width: 769px) {
   .splash {
@@ -286,9 +295,22 @@ nav {
   right: 0; }
 
 @media screen and (min-width: 769px) {
+  .content--hidden {
+    margin-left: 30px;
+    opacity: 0; }
   .content__box {
     display: flex;
-    height: 40vh; }
+    height: 40vh;
+    transition: 1.5s; }
+  .content__junk {
+    height: 40vh;
+    width: 100vw;
+    z-index: 50;
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    background-color: blue;
+    opacity: 0; }
   .content__imagebox {
     width: 50%;
     height: 100%; }
@@ -305,10 +327,11 @@ nav {
     width: 100%;
     object-fit: cover; }
   .content__info {
-    width: 50%; }
+    width: 50%;
+    padding: 40px; }
   .content__cta {
     border: none;
-    height: 50%;
+    height: 65%;
     width: 25%;
     align-self: center;
     border-radius: 20px;

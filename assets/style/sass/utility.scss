@@ -47,6 +47,8 @@ h1 {
 
 .font--mainheader {
   font-size: $fontsize--header;
+  font-family: $mainfont;
+  font-weight: 200;
   color: #ffffff;
   text-shadow: 2.5px 2.5px 6px rgba(0, 0, 0, 0.52);
   text-align: center;

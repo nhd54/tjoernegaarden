@@ -43,9 +43,26 @@
 }
 
 @media screen and (min-width: 769px) {
+  .content--hidden {
+    margin-left: 30px;
+    opacity: 0;
+  }
+
   .content__box {
     display: flex;
     height: 40vh;
+    transition: 1.5s;
+  }
+
+  .content__junk {
+    height: 40vh;
+    width: 100vw;
+    z-index: 50;
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    background-color: blue;
+    opacity: 0;
   }
 
   .content__imagebox {
@@ -77,11 +94,12 @@
 
   .content__info {
     width: 50%;
+    padding: 40px;
   }
 
   .content__cta {
     border: none;
-    height: 50%;
+    height: 65%;
     width: 25%;
     align-self: center;
     border-radius: 20px;

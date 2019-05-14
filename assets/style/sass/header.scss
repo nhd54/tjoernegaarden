@@ -1,8 +1,11 @@
 .menu {
   height: 10vh;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   padding: 0 2%;
+  position: fixed;
+  z-index: 20;
 }
 
 .menu__logo {
@@ -103,7 +106,7 @@ nav {
 
 @media screen and(min-width:769px) {
   .menu {
-    height: 6vh;
+    height: 7vh;
   }
 
   .menu__logo img {
@@ -111,6 +114,7 @@ nav {
     position: relative;
     top: 20px;
     left: 15px;
+    transition: 0.4s;
   }
 
   .menu__icon {
@@ -124,6 +128,11 @@ nav {
     position: static;
     height: auto;
     width: auto;
+  }
+
+  .menu__logo .menu--scrolled {
+    width: 35%;
+    top: 0;
   }
 
   .navigation__item {

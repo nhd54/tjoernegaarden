@@ -53,19 +53,21 @@
 
 .splash__content i {
   font-size: 40px;
-  animation: movearrow 2s infinite;
+  animation: movearrow 2s infinite ease-in-out;
   position: relative;
 }
 
 @keyframes movearrow {
   0% {
-    top: 0px;
+    transform: translateY(0px);
   }
+
   50% {
-    top: 5px;
+    transform: translateY(5px);
   }
+
   100% {
-    top: 0px;
+    transform: translateY(0px);
   }
 }
 
