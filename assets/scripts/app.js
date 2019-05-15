@@ -16,9 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let betingelser = document.querySelector("body");
   let logo = document.querySelector(".logo");
   let contentBox = document.querySelectorAll(".content__box");
-  let scrollHeight = betingelser.scrollHeight - 550;
   let currentScrollHeight = 0;
-  let reachButtom = false;
+
   betingelser.onscroll = documentRead;
 
   function documentRead(event) {
@@ -31,35 +30,124 @@ document.addEventListener("DOMContentLoaded", () => {
       logo.classList.remove("menu--scrolled");
     }
 
-    if (currentScrollHeight >= 120) {
-      contentBox[0].classList.remove("content--hidden");
+    function myFunction(x) {
+      if (x.matches) {
+        if (currentScrollHeight >= 120) {
+          contentBox[0].classList.remove("content--hidden");
+        }
+
+        if (currentScrollHeight >= 545) {
+          contentBox[1].classList.remove("content--hidden");
+        }
+        if (currentScrollHeight >= 1050) {
+          contentBox[2].classList.remove("content--hidden");
+        }
+        if (currentScrollHeight >= 1535) {
+          contentBox[3].classList.remove("content--hidden");
+        }
+      } else {
+        if (currentScrollHeight >= 120) {
+          contentBox[0].classList.remove("content--hidden");
+        }
+
+        if (currentScrollHeight >= 400) {
+          contentBox[1].classList.remove("content--hidden");
+        }
+        if (currentScrollHeight >= 710) {
+          contentBox[2].classList.remove("content--hidden");
+        }
+        if (currentScrollHeight >= 1015) {
+          contentBox[3].classList.remove("content--hidden");
+        }
+      }
     }
+
+    var x = window.matchMedia("(max-width: 700px)");
+    myFunction(x); // Call listener function at run time
+    x.addListener(myFunction); // Attach listener function on state changes
   }
 });
 
 //greensock animation
-
-let leftbox = document.querySelector(".content__junk");
-
-leftbox.addEventListener("mouseover", () => {
-  console.log("ind");
-
+function moveLeftDown(myClass) {
   staggerPoints(
-    ".focus--left .cls-1",
+    myClass,
     0.5,
     { points: "909.76 348.4 0 348.4 0 348.4 909.76 348.4" },
     0
   );
-});
+}
 
-leftbox.addEventListener("mouseleave", () => {
-  console.log("ud");
+function moveLeftUp(myClass) {
   staggerPoints(
-    ".focus--left .cls-1",
+    myClass,
     0.5,
     { points: "909.76 348.4 0 0 0 348.4 909.76 348.4" },
     0
   );
+}
+
+function moveRightDown(myClass) {
+  staggerPoints(
+    myClass,
+    0.5,
+    { points: "0 348.4 909.76 348.4 909.76 348.4 0 348.4" },
+    0
+  );
+}
+
+function moveRightUp(myClass) {
+  staggerPoints(
+    myClass,
+    0.5,
+    { points: "0 348.4 909.76 0 909.76 348.4 0 348.4" },
+    0
+  );
+}
+let leftbox = document.querySelectorAll(".content__junk");
+
+leftbox[0].addEventListener("mouseover", () => {
+  console.log("ind");
+
+  moveLeftDown(".one .cls-1");
+});
+
+leftbox[0].addEventListener("mouseleave", () => {
+  console.log("ud");
+  moveLeftUp(".one .cls-1");
+});
+
+leftbox[1].addEventListener("mouseover", () => {
+  console.log("ind");
+
+  moveRightDown(".two .cls-1");
+});
+
+leftbox[1].addEventListener("mouseleave", () => {
+  console.log("ud");
+  moveRightUp(".two .cls-1");
+});
+
+leftbox[2].addEventListener("mouseover", () => {
+  console.log("ind");
+
+  moveLeftDown(".tree .cls-1");
+});
+
+leftbox[2].addEventListener("mouseleave", () => {
+  console.log("ud");
+  moveLeftUp(".tree .cls-1");
+});
+
+leftbox[3].addEventListener("mouseover", () => {
+  console.log("ind");
+
+  moveRightDown(".four .cls-1");
+});
+
+leftbox[3].addEventListener("mouseleave", () => {
+  console.log("ud");
+  moveRightUp(".four .cls-1");
 });
 
 //all the work is done in this one function that spits back a TimelineLite.
